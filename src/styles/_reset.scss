@@ -36,6 +36,14 @@ li{
     text-decoration: none;
 }
 
+button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    background-color: transparent;
+    color: inherit;
+}
+
 blockquote, q {
     quotes:none;
 }
