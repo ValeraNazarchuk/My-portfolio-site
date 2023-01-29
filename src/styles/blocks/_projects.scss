@@ -1,0 +1,40 @@
+.projects {
+  margin-bottom: 180px;
+}
+
+.projects__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  &-link {
+    max-width: 360px;
+    border: 1px solid $fs-purple-light;
+    border-radius: 15px;
+    padding: 20px;
+    &:hover{
+      .projects__body-img{
+        opacity: 1;
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 10px 0px;
+  }
+  &-item {
+    font-size: 16px;
+    line-height: 19px;
+    padding: 10px;
+    color: $fs-purple-light;
+    background-color: $bg-purple;
+    border-radius: 15px;
+  }
+  &-img {
+    max-width: 300px;
+    border-radius: 15px;
+    transition: all .5s;
+    opacity: .5;
+  }
+}

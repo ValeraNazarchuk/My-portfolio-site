@@ -151,7 +151,8 @@ body {
 }
 
 .skills--img {
-  width: 40px;
+  max-width: 40px;
+  max-height: 40px;
 }
 
 @font-face {
@@ -226,7 +227,7 @@ body {
   padding: 50px 0;
   display: flex;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 180px;
 }
 .top__inner {
   display: flex;
@@ -267,7 +268,7 @@ body {
 }
 
 .about {
-  margin-bottom: 150px;
+  margin-bottom: 180px;
 }
 .about__inner {
   display: flex;
@@ -301,32 +302,15 @@ body {
 }
 
 .skills {
-  margin-bottom: 150px;
+  margin-bottom: 180px;
 }
 .skills__inner {
   display: flex;
 }
 
-.skills__technologies {
-  padding: 20px;
-  background-color: rgba(123, 74, 226, 0.05);
-  border-radius: 15px;
-}
-.skills__technologies-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-.skills__technologies-item {
-  display: flex;
-  align-items: center;
-}
-
 .skills__content {
-  margin-left: 50px;
   display: flex;
   flex-direction: column;
-  width: 100%;
   gap: 30px;
 }
 .skills__content-list {
@@ -344,9 +328,80 @@ body {
   display: flex;
   align-items: center;
 }
-.skills__content-box {
+
+.skills__technologies {
+  margin-left: 20px;
+  display: flex;
+}
+.skills__technologies-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  background-color: rgba(123, 74, 226, 0.05);
+  border-radius: 15px;
+  flex-direction: column;
+  gap: 20px;
+}
+.skills__technologies-item {
   display: flex;
   align-items: center;
+}
+
+.skills__box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
   gap: 10px;
+}
+.skills__box-list {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(123, 74, 226, 0.05);
+  border-radius: 15px;
+  gap: 15px;
+}
+.skills__box-item {
+  display: flex;
+  align-items: center;
+}
+
+.projects {
+  margin-bottom: 180px;
+}
+
+.projects__body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects__body-link {
+  max-width: 360px;
+  border: 1px solid #7B4AE2;
+  border-radius: 15px;
+  padding: 20px;
+}
+.projects__body-link:hover .projects__body-img {
+  opacity: 1;
+}
+.projects__body-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0px;
+}
+.projects__body-item {
+  font-size: 16px;
+  line-height: 19px;
+  padding: 10px;
+  color: #7B4AE2;
+  background-color: rgba(123, 74, 226, 0.05);
+  border-radius: 15px;
+}
+.projects__body-img {
+  max-width: 300px;
+  border-radius: 15px;
+  transition: all 0.5s;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=style.css.map */
