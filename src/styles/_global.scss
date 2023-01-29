@@ -27,8 +27,22 @@ body {
 }
 
 .title{
-  font-size: 38px;
-  line-height: 46px;
+  display: inline-block;
+  font-size: 30px;
+  padding: 15px;
+  line-height: 36px;
+  color: $fs-purple-light;
+  background-color: $bg-purple;
+  border-radius: 15px;
   font-weight: 800;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+}
+
+.skills--text{
+  color: $fs-purple-light;
+  margin-left: 10px;
+}
+
+.skills--img{
+  width: 40px;
 }

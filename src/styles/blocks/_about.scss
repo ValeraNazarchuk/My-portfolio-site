@@ -1,18 +1,35 @@
-.about{
-  &__inner{
+.about {
+  margin-bottom: 150px;
+  &__inner {
     display: flex;
+  }
+  &__image{
+    max-width: 350px;
+    img{
+      width: 100%;
+    }
   }
 }
 
-.about__content{
+.about__content {
   margin-left: 100px;
-  &-text{
-    font-size: 20px;
-    line-height: 26px;
+  &-text {
+    font-size: 18px;
+    line-height: 24px;
+    color: $fs-gray;
   }
-  &-list{
+  &-list {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
-    padding: 15px;
-    border: 1px solid $bg-gray;
+    // padding: 15px;
+    // border: 1px solid $fs-purple-light;
+    gap: 10px;
+  }
+  &-item{
+    color: $fs-white;
+    span{
+      color: $fs-purple-light;
+    }
   }
 }

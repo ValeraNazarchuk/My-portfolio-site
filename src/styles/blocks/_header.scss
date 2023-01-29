@@ -5,39 +5,42 @@
   right: 0;
   padding: 20px 0;
   z-index: 5;
-  background-color: rgba(0, 0, 0, 0.1);
   &__inner {
+    background-color: $bg-purple;
+    border-radius: 15px;
+    padding: 10px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     min-height: 30px;
     text-transform: uppercase;
-    font-size: 22px;
-    line-height: 28px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
   }
-  &__logo{
-    img{
-      width: 60px;
-      filter: contrast(0.3);
-      transition: all .4s;
-      &:hover{
-        filter: contrast(0);
+  &__logo {
+    img {
+      width: 40px;
+      filter: invert(0.5);
+      transition: all 0.4s;
+      &:hover {
+        filter: invert(1);
       }
     }
   }
 }
 
-.nav{
-  &__list{
+.nav {
+  &__list {
     display: flex;
     align-items: center;
     gap: 30px;
-    &-item{
+    &-item {
       letter-spacing: 0.2em;
-      transition: all .6s;
+      transition: all 0.6s;
       border-bottom: 1px solid transparent;
       color: $fs-gray;
-      &:hover{
+      &:hover {
         color: $fs-white;
         border-bottom: 1px solid $bg-gray;
       }

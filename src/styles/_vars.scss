@@ -2,11 +2,13 @@
 
 $fs-white: #fff;
 $fs-black: #000;
-// $fs-gray: #c2c2c2;
-$fs-gray: gray;
+$fs-gray: rgba(255, 255, 255, 0.5);
+$fs-purple-dark: rgba(123, 74, 226, 0.5);
+$fs-purple-light: #7B4AE2;
 
 //Colors Bg
 
-$bg-black: #17171a;
+$bg-black: #090E16;
+$bg-purple:  rgba(123, 74, 226, 0.05);
 $bg-block: #1f2025;
 $bg-gray: #c2c2c2;
