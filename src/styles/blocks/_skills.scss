@@ -2,14 +2,12 @@
   margin-bottom: 180px;
   &__inner {
     display: flex;
-    // justify-content: space-between;
   }
 }
 
 .skills__content {
   display: flex;
   flex-direction: column;
-  // margin-bottom: 30px;
   gap: 30px;
   &-list {
     display: flex;
@@ -17,7 +15,7 @@
     padding: 20px;
     background-color: $bg-purple;
     border-radius: 15px;
-    gap: 15px;
+    gap: 20px;
   }
   &-info {
     color: $fs-gray;
