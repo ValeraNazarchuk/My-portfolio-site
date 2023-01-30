@@ -221,13 +221,11 @@ body {
   color: #fff;
   border-bottom: 1px solid #c2c2c2;
 }
-
 .top {
   min-height: 100vh;
   padding: 50px 0;
   display: flex;
   align-items: center;
-  margin-bottom: 230px;
 }
 .top__inner {
   display: flex;
@@ -268,7 +266,7 @@ body {
 }
 
 .about {
-  margin-bottom: 230px;
+  padding-top: 230px;
 }
 .about__inner {
   display: flex;
@@ -302,7 +300,7 @@ body {
 }
 
 .skills {
-  margin-bottom: 230px;
+  padding: 230px 0 100px;
 }
 .skills__inner {
   display: flex;
@@ -367,7 +365,7 @@ body {
 }
 
 .projects {
-  margin-bottom: 230px;
+  padding-top: 130px;
 }
 
 .projects__body {
@@ -419,7 +417,10 @@ body {
 }
 
 .contact {
-  margin-bottom: 230px;
+  padding: 230px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .contact__inner {
   margin-top: 50px;
