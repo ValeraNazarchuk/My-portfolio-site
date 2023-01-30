@@ -1,5 +1,4 @@
 .projects {
-  // margin-bottom: 230px;
   padding-top: 130px;
 }
 
@@ -8,6 +7,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   &-link {
+    display: flex;
+    flex-direction: column;
     max-width: 360px;
     border: 1px solid $bg-purple-light;
     border-radius: 15px;
@@ -27,6 +28,7 @@
     line-height: 23px;
     color: $fs-gray;
     transition: all .5s;
+    margin-bottom: 10px;
   }
 
   &-list {
@@ -34,7 +36,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-    margin: 10px 0px;
+    margin: auto 0px 10px;
   }
   &-item {
     font-size: 16px;
@@ -45,6 +47,7 @@
     border-radius: 15px;
   }
   &-img {
+    margin-top: auto;
     border-radius: 15px;
     transition: all .5s;
     opacity: .5;

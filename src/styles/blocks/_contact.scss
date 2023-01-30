@@ -1,17 +1,22 @@
-.contact{
+.contact {
   padding: 230px 0;
-  &__inner{
+  display: flex;
+  flex-direction: column;
+  &__title {
+    align-self: center;
+  }
+  &__inner {
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
   }
 }
 
-.contact__list{
+.contact__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  &-link{
+  &-link {
     color: $fs-purple-dark;
     display: flex;
     align-items: center;
@@ -19,33 +24,32 @@
     border: 1px solid $bg-purple-light;
     border-radius: 15px;
     gap: 10px;
-    transition: all .5s;
-    &:hover{
+    transition: all 0.5s;
+    &:hover {
       color: $fs-purple-light;
     }
   }
 }
 
-
-.contact__info{
+.contact__info {
   margin-left: 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   &-email,
-  &-phone{
+  &-phone {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &-text{
+  &-text {
     margin: 10px 0;
     color: $fs-purple-dark;
   }
-  &-link{
+  &-link {
     color: $fs-gray;
-    transition: all .5s;
-    &:hover{
+    transition: all 0.5s;
+    &:hover {
       color: $fs-white;
     }
   }

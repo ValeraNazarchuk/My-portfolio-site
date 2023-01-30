@@ -2,8 +2,15 @@
   .skills--text {
     font-size: 16px;
   }
-  .skills__content-info{
+  .skills__content-info {
     font-size: 16px;
+  }
+
+  //---------------------Projects---------
+  .projects__body-img {
+    img {
+      height: 160px;
+    }
   }
 }
 @media (max-width: 1000px) {
@@ -15,6 +22,12 @@
     flex-direction: row;
     &-list {
       width: 100%;
+    }
+  }
+  //---------------Projects------------------
+  .projects__body-img {
+    img {
+      height: 130px;
     }
   }
 }
@@ -33,7 +46,7 @@
     gap: 15px;
   }
 
-    .skills__content {
+  .skills__content {
     flex-direction: row;
     gap: 15px;
   }
@@ -48,9 +61,26 @@
     flex-direction: column;
   }
 
-  .skills__technologies{
+  .skills__technologies {
     margin: 0;
     max-width: 540px;
+  }
+  //----------------Projects------------
+
+  .projects__body {
+    &-title {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &-item {
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &-img {
+      img {
+        height: 110px;
+      }
+    }
   }
 }
 @media (max-width: 700px) {
@@ -147,8 +177,19 @@
   }
   //------------------Skills-----------
 
-  .skills{
+  .skills {
     padding-top: 100px;
+  }
+
+  //-------------------Projects----------
+  .projects__body {
+    grid-template-columns: repeat(2, 1fr);
+
+    &-img {
+      img {
+        height: 140px;
+      }
+    }
   }
 }
 @media (max-width: 550px) {
@@ -185,7 +226,7 @@
   .skills--text {
     font-size: 14px;
   }
-  .skills__content-info{
+  .skills__content-info {
     font-size: 14px;
   }
 
@@ -218,9 +259,43 @@
     flex-direction: row;
   }
 
-  .skills__box-list{
+  .skills__box-list {
     height: auto;
     padding: 10px;
   }
 
+  //---------------Projects------------
+  .projects{
+    padding: 0;
+  }
+
+  .projects__body {
+    grid-template-columns: repeat(1, 1fr);
+    &-link{
+      max-width: 300px;
+    }
+    &-img {
+      img {
+        height: 140px;
+      }
+    }
+  }
+
+  //-----------------Contact------------
+  .contact{
+    padding: 100px 0 20px;
+    &__inner{
+      margin: 10px 0 0;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      font-size: 14px;
+    }
+    &__list{
+      max-width: 155px;
+    }
+    &__info{
+      margin: 0 0 20px;
+    }
+  }
 }
