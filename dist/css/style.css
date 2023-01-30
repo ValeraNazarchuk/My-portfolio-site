@@ -469,4 +469,69 @@ body {
 .contact__info-link:hover {
   color: #fff;
 }
+
+@media (max-width: 900px) {
+  .nav__list {
+    gap: 15px;
+  }
+}
+@media (max-width: 700px) {
+  .header__logo {
+    order: 1;
+  }
+  .nav {
+    order: 3;
+  }
+  .btn-background {
+    order: 2;
+  }
+  .nav__list {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transform: translateY(-100%);
+    transition: transform 0.4s;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .nav__list--active {
+    transform: translateX(0);
+  }
+  .nav__burger {
+    cursor: pointer;
+  }
+  .nav__burger::after, .nav__burger::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #c2c2c2;
+    transition: transform 0.4s;
+  }
+  .nav__burger.nav__burger--active span {
+    display: none;
+  }
+  .nav__burger.nav__burger--active::after {
+    content: "";
+    transform: rotate(-45deg);
+  }
+  .nav__burger.nav__burger--active::before {
+    content: "";
+    transform: translateY(3px) rotate(45deg);
+  }
+  .nav__burger-line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #c2c2c2;
+    margin: 8px 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
