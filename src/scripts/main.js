@@ -23,4 +23,9 @@ burger.addEventListener('click', menu)
 function menu(e) {
   burger.classList.toggle('nav__burger--active')
   navList.classList.toggle('nav__list--active')
+  if (burger.classList.contains('nav__burger--active')) {
+    document.body.style.overflow = 'hidden'
+  } else{
+    document.body.style.overflow = 'auto'
+  }
 }

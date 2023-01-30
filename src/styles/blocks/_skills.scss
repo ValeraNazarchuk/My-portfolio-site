@@ -28,7 +28,7 @@
 }
 
 .skills__technologies {
-  margin-left: 20px;
+  margin-left: 10px;
   display: flex;
   &-list {
     display: grid;
@@ -48,18 +48,24 @@
 .skills__box {
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
+  margin-left: 10px;
   gap: 10px;
   &-list {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     padding: 20px;
     background-color: $bg-purple;
     border-radius: 15px;
     gap: 15px;
+    height: 100%;
   }
   &-item {
     display: flex;
     align-items: center;
   }
+}
+
+.skills--mobile{
+  display: none;
 }
