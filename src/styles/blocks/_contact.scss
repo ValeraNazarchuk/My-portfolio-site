@@ -1,13 +1,9 @@
 .contact{
-  // margin-bottom: 230px;
   padding: 230px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   &__inner{
     margin-top: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 

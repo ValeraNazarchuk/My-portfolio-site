@@ -14,9 +14,12 @@ for (let anchor of anchors) {
     })
     navList.classList.remove('nav__list--active')
     burger.classList.remove('nav__burger--active')
+
+    const overflow = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
+
+    document.body.style.overflow = overflow
   })
 }
-
 
 burger.addEventListener('click', menu)
 
@@ -25,7 +28,7 @@ function menu(e) {
   navList.classList.toggle('nav__list--active')
   if (burger.classList.contains('nav__burger--active')) {
     document.body.style.overflow = 'hidden'
-  } else{
+  } else {
     document.body.style.overflow = 'auto'
   }
 }
