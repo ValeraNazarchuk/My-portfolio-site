@@ -37,10 +37,6 @@
   }
 
   //--------------SKILLS----------------
-  .skills__technologies-list {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .skills__inner {
     flex-direction: column;
     gap: 15px;
@@ -49,6 +45,14 @@
   .skills__content {
     flex-direction: row;
     gap: 15px;
+  }
+
+  .skills__technologies {
+    margin: 0;
+    max-width: 540px;
+    &-list {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   .skills--main {
@@ -61,10 +65,6 @@
     flex-direction: column;
   }
 
-  .skills__technologies {
-    margin: 0;
-    max-width: 540px;
-  }
   //----------------Projects------------
 
   .projects__body {
@@ -226,17 +226,10 @@
   .skills--text {
     font-size: 14px;
   }
-  .skills__content-info {
-    font-size: 14px;
-  }
 
   .skills--img {
     max-width: 30px;
     max-height: 30px;
-  }
-
-  .skills__technologies-list {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills__inner {
@@ -247,6 +240,13 @@
   .skills__content {
     flex-direction: column;
     gap: 0;
+    &-info {
+      font-size: 14px;
+    }
+  }
+
+  .skills__technologies-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skills--mobile {
@@ -265,13 +265,13 @@
   }
 
   //---------------Projects------------
-  .projects{
+  .projects {
     padding: 0;
   }
 
   .projects__body {
     grid-template-columns: repeat(1, 1fr);
-    &-link{
+    &-link {
       max-width: 300px;
     }
     &-img {
@@ -282,19 +282,19 @@
   }
 
   //-----------------Contact------------
-  .contact{
+  .contact {
     padding: 100px 0 40px;
-    &__inner{
+    &__inner {
       margin: 10px 0 0;
       display: flex;
       flex-direction: column-reverse;
       align-items: center;
       font-size: 16px;
     }
-    &__list{
+    &__list {
       max-width: 155px;
     }
-    &__info{
+    &__info {
       margin: 0 0 20px;
     }
   }
