@@ -116,6 +116,27 @@ a {
   text-decoration: none;
 }
 
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #343234 #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #090E16;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #343234;
+  border-radius: 10px;
+  border: 3px solid #090E16;
+}
+
 body {
   font-family: "", sans-serif;
   font-size: 18px;
@@ -171,8 +192,10 @@ body {
   top: 0px;
   left: 0;
   right: 0;
-  padding: 20px 0;
   z-index: 5;
+  max-width: 1260px;
+  padding: 20px 30px;
+  margin: 0 auto;
 }
 .header__inner {
   background-color: rgba(123, 74, 226, 0.05);
@@ -332,6 +355,7 @@ body {
 }
 .about__inner {
   display: flex;
+  align-items: center;
 }
 .about__image {
   max-width: 350px;
@@ -566,6 +590,9 @@ body {
   }
 }
 @media (max-width: 1000px) {
+  .about__content {
+    margin-left: 30px;
+  }
   .skills__technologies {
     flex-direction: column;
   }

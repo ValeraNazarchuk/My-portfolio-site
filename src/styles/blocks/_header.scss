@@ -3,8 +3,10 @@
   top: 0px;
   left: 0;
   right: 0;
-  padding: 20px 0;
   z-index: 5;
+  max-width: 1260px;
+  padding: 20px 30px; 
+  margin: 0 auto; 
   &__inner {
     background-color: $bg-purple;
     border-radius: 15px;
