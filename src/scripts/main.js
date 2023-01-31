@@ -15,9 +15,9 @@ for (let anchor of anchors) {
     navList.classList.remove('nav__list--active')
     burger.classList.remove('nav__burger--active')
 
-    const overflow = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
+    const overflowValue = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
 
-    document.body.style.overflow = overflow
+    document.body.style.overflow = overflowValue
   })
 }
 
@@ -26,9 +26,8 @@ burger.addEventListener('click', menu)
 function menu(e) {
   burger.classList.toggle('nav__burger--active')
   navList.classList.toggle('nav__list--active')
-  if (burger.classList.contains('nav__burger--active')) {
-    document.body.style.overflow = 'hidden'
-  } else {
-    document.body.style.overflow = 'auto'
-  }
+
+  const overflowValue = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
+
+  document.body.style.overflow = overflowValue
 }
