@@ -21,13 +21,11 @@ for (let anchor of anchors) {
   })
 }
 
-burger.addEventListener('click', menu)
-
-function menu(e) {
+burger.addEventListener('click', () => {
   burger.classList.toggle('nav__burger--active')
   navList.classList.toggle('nav__list--active')
-
+  
   const overflowValue = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
-
+  
   document.body.style.overflow = overflowValue
-}
+})

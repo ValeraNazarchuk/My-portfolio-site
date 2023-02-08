@@ -5,8 +5,9 @@
     align-items: center;
   }
   &__image{
-    max-width: 350px;
+    max-width: 300px;
     img{
+      border-radius: 15px;
       width: 100%;
     }
   }
