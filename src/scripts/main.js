@@ -1,6 +1,7 @@
-const anchors = document.querySelectorAll('.header a')
+const anchors = document.querySelectorAll('#anchor')
 const navList = document.querySelector('.nav__list')
 const burger = document.querySelector('.nav__burger')
+const back = document.querySelector('.back__top')
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
@@ -29,3 +30,12 @@ burger.addEventListener('click', () => {
   
   document.body.style.overflow = overflowValue
 })
+
+window.onscroll = () => {
+  let scrolled = document.documentElement.scrollTop
+  if (scrolled > 300) {
+    back.classList.add('back__top-active')
+  } else {
+    back.classList.remove('back__top-active')
+  }
+}

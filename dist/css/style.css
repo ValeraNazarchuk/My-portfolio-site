@@ -166,6 +166,28 @@ body {
   margin-bottom: 20px;
 }
 
+.back__top {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: -50px;
+  right: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #7B4AE2;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.back__top-active {
+  transition: all 0.5s;
+  bottom: 50px;
+}
+.back__top-active:hover {
+  background-color: #ac8cef;
+}
+
 @font-face {
   font-family: "Lato";
   font-weight: 900;
