@@ -1,7 +1,6 @@
 const anchors = document.querySelectorAll('#anchor')
 const navList = document.querySelector('.nav__list')
 const burger = document.querySelector('.nav__burger')
-const back = document.querySelector('.back__top')
 
 for (let anchor of anchors) {
   anchor.addEventListener('click', function (e) {
@@ -31,6 +30,9 @@ burger.addEventListener('click', () => {
   document.body.style.overflow = overflowValue
 })
 
+//-----------------Button_back-top------------
+const back = document.querySelector('.back__top')
+
 window.onscroll = () => {
   let scrolled = document.documentElement.scrollTop
   if (scrolled > 300) {
@@ -40,7 +42,7 @@ window.onscroll = () => {
   }
 }
 
-//---------------------Projects_*Slider*-------------------------------
+//----------------Projects_*Slider*--------------------------
 
 const projectBody = document.querySelector('.projects__body')
 const projectLink = document.querySelectorAll('.projects__body-link')
@@ -48,9 +50,10 @@ const projectLink = document.querySelectorAll('.projects__body-link')
 const btnNext = document.querySelector('.projects-next')
 const btnBack = document.querySelector('.projects-back')
 
-let count = 0
+let count = 0 // запоминає кількість кліків на кнопки
 let width
 
+// скільки слайдів буде на екрані
 function sliderToShow(value) {
   if (value > 640) return 3
 
@@ -58,22 +61,26 @@ function sliderToShow(value) {
   else return 1
 }
 
-function inits() {
+// функція для собитія 'resize'
+function init() {
   const offsetWidth = document.querySelector('.projects__inner').offsetWidth
+  // ширину projects__inner ділю на кількіість слайдів 
   width = offsetWidth / sliderToShow(offsetWidth)
 
+  // обща ширина для projects__body
   projectBody.style.width = width * projectLink.length + 'px'
 
+  // для кожного елемента задаю ширину і остальні параменти
   projectLink.forEach((item) => {
     item.style.width = width + 'px'
     item.style.height = 'auto'
-    item.style.margin = '0 auto' // під вопросом
+    item.style.margin = '0 auto'
   })
   rollSliders()
 }
 
-inits()
-window.addEventListener('resize', inits)
+init()
+window.addEventListener('resize', init)
 
 btnNext.addEventListener('click', () => {
   const offsetWidth = document.querySelector('.projects__inner').offsetWidth
@@ -93,6 +100,8 @@ btnBack.addEventListener('click', () => {
   rollSliders()
 })
 
+// функція для вимірування довжини прокрутки
+// задав для кнопок і для функції init щоб при зміні ширини projects__inner мінялись і ці параметри сразу же а не після перезагрузки сайту
 function rollSliders() {
   projectBody.style.transform = `translate(-${count * width}px)`
 }
