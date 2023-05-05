@@ -1,0 +1,62 @@
+.work {
+  padding-top: 130px;
+  &__inner {
+    // position: relative;
+    // overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+  }
+
+  &__buttons {
+    margin-right: 30px;
+  }
+
+  &__button {
+    color: $fs-purple-light;
+    background-color: $bg-purple;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: all .5s;
+    border-radius: 5px;
+    &:hover {
+      background-color: $bg-purple-light;
+      color: $fs-white;
+    }
+
+    &-active {
+
+    }
+  }
+
+  &__list {
+    max-width: 360px;
+    &-item {
+
+    }
+
+    &-title {
+      color: $fs-purple-light;
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 10px;
+    }
+
+    &-range {
+      color: $fs-purple-light;
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 20px;
+    }
+
+    &-text {
+      color: $fs-gray;
+      font-size: 16px;
+      line-height: 18px;
+      & + & {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+

@@ -262,6 +262,9 @@ body {
           filter: invert(1);
 }
 
+.nav {
+  margin: 0 auto;
+}
 .nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -603,6 +606,59 @@ body {
   display: none;
 }
 
+.work {
+  padding-top: 130px;
+}
+.work__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 80px;
+}
+.work__buttons {
+  margin-right: 30px;
+}
+.work__button {
+  color: #7B4AE2;
+  background-color: rgba(123, 74, 226, 0.05);
+  padding: 10px 40px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+.work__button:hover {
+  background-color: #7B4AE2;
+  color: #fff;
+}
+.work__list {
+  max-width: 360px;
+}
+.work__list-title {
+  color: #7B4AE2;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 10px;
+}
+.work__list-range {
+  color: #7B4AE2;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 20px;
+}
+.work__list-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  line-height: 18px;
+}
+.work__list-text + .work__list-text {
+  margin-top: 10px;
+}
+
 .projects {
   padding-top: 130px;
 }
@@ -853,6 +909,7 @@ body {
 @media (max-width: 800px) {
   .nav__list {
     gap: 15px;
+    font-size: 16px;
   }
   .skills__inner {
     -webkit-box-orient: vertical;
@@ -902,20 +959,8 @@ body {
   }
 }
 @media (max-width: 700px) {
-  .header__logo {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
   .nav {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  .header__loader {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    margin: 0;
   }
   .nav__list {
     z-index: -1;
@@ -1091,6 +1136,21 @@ body {
   .skills__box-list {
     height: auto;
     padding: 10px;
+  }
+  .work__buttons {
+    margin-right: 15px;
+  }
+  .work__button {
+    padding: 5px 20px;
+    font-size: 16px;
+  }
+  .work__list-title {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .work__list-text {
+    font-size: 14px;
+    line-height: 16px;
   }
   .projects {
     padding-top: 100px;
