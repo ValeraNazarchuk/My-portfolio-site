@@ -10,6 +10,9 @@
 
   &__buttons {
     margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   &__button {
@@ -25,14 +28,15 @@
     }
 
     &-active {
-
+      background-color: $bg-purple-light;
+      color: $fs-white;
     }
   }
 
   &__list {
     max-width: 360px;
     &-item {
-
+      display: none;
     }
 
     &-title {
@@ -57,6 +61,17 @@
         margin-top: 10px;
       }
     }
+
+    &-link {
+      color: $fs-purple-dark;
+      transition: all .3s;
+      &:hover {
+        color: $fs-purple-light;
+      }
+    }
+  }
+  &__item--active {
+    display: block;
   }
 }
 

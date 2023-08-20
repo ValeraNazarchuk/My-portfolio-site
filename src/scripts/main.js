@@ -15,7 +15,9 @@ for (let anchor of anchors) {
     navList.classList.remove('nav__list--active')
     burger.classList.remove('nav__burger--active')
 
-    const overflowValue = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
+    const overflowValue = burger.classList.contains('nav__burger--active')
+      ? 'hidden'
+      : 'auto'
 
     document.body.style.overflow = overflowValue
   })
@@ -24,9 +26,11 @@ for (let anchor of anchors) {
 burger.addEventListener('click', () => {
   burger.classList.toggle('nav__burger--active')
   navList.classList.toggle('nav__list--active')
-  
-  const overflowValue = burger.classList.contains('nav__burger--active') ? 'hidden' : 'auto'
-  
+
+  const overflowValue = burger.classList.contains('nav__burger--active')
+    ? 'hidden'
+    : 'auto'
+
   document.body.style.overflow = overflowValue
 })
 
@@ -64,7 +68,7 @@ function sliderToShow(value) {
 // функція для собитія 'resize'
 function init() {
   const offsetWidth = document.querySelector('.projects__inner').offsetWidth
-  // ширину projects__inner ділю на кількіість слайдів 
+  // ширину projects__inner ділю на кількіість слайдів
   width = offsetWidth / sliderToShow(offsetWidth)
 
   // обща ширина для projects__body
@@ -105,3 +109,19 @@ btnBack.addEventListener('click', () => {
 function rollSliders() {
   projectBody.style.transform = `translate(-${count * width}px)`
 }
+
+// переключення кнопок *де працював*
+
+const workBtn = document.querySelectorAll('.work__button')
+const workItem = document.querySelectorAll('.work__list-item')
+
+workBtn.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    for (let i = 0; i < workBtn.length; i++) {
+      workBtn[i].classList.remove('work__button-active')
+      workItem[i].classList.remove('work__item--active')
+    }
+    button.classList.add('work__button-active')
+    workItem[index].classList.add('work__item--active')
+  })
+})
