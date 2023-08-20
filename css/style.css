@@ -551,6 +551,14 @@ body {
 }
 .work__buttons {
   margin-right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 15px;
 }
 .work__button {
   color: #7B4AE2;
@@ -566,8 +574,15 @@ body {
   background-color: #7B4AE2;
   color: #fff;
 }
+.work__button-active {
+  background-color: #7B4AE2;
+  color: #fff;
+}
 .work__list {
   max-width: 360px;
+}
+.work__list-item {
+  display: none;
 }
 .work__list-title {
   color: #7B4AE2;
@@ -588,6 +603,18 @@ body {
 }
 .work__list-text + .work__list-text {
   margin-top: 10px;
+}
+.work__list-link {
+  color: rgba(123, 74, 226, 0.5);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.work__list-link:hover {
+  color: #7B4AE2;
+}
+.work__item--active {
+  display: block;
 }
 
 .projects {
@@ -1073,7 +1100,7 @@ body {
   }
   .work__button {
     padding: 5px 20px;
-    font-size: 16px;
+    font-size: 13px;
   }
   .work__list-title {
     font-size: 18px;
